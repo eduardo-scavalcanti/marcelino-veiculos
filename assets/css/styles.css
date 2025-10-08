@@ -184,35 +184,6 @@ header nav a:active{
     padding-left: 10px;
 }
 
-/* texto */
-
-#texto-section{
-    width: 100%;
-    height: 600px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-#texto-section img{
-    width: 300px;
-    height: 500px;
-    border: 1px solid transparent;
-    border-radius: 50px;
-    box-shadow: 10px 10px 10px rgb(255,255,255,0.1);
-}
-
-#texto-section p{
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 40px;
-    color: var(--color-body);
-}
-
 /* FOOTER */
 
 footer > div{
@@ -224,12 +195,10 @@ footer > div{
     align-items: center;
 }
 
-
-
 footer > div > div{
     border: 1px solid white;
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 150px;
 }
 
 .copyright{
@@ -245,4 +214,34 @@ footer > div > div{
 .copyright p{
     font-family: var(--font-body);
     color: var(--color-body);
+}
+
+/* SOBRE */
+
+/* MAIN */
+
+#main-sobre{
+    background-color: black;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#main-sobre h1, #main-sobre h2, #main-sobre h3{
+    font-family: var(--font-header);
+    color: var(--color-header);
+}
+
+#main-sobre p, #main-sobre li, #main-sobre td, #main-sobre th{
+    font-family: var(--font-body);
+    color: var(--color-body);
+}
+
+#main-sobre th, #main-sobre td{
+    padding: 10px;
+}
+
+#main-sobre ul{
+    padding-left: 50px;
+    justify-content: center;
+    align-items: center;
 }
