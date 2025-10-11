@@ -1,287 +1,235 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*      1. GERAL E VARIÁVEIS     */
 
-*{
-    margin: 0px;
-    padding: 0px;
+:root {
+    /* Paleta de Cores */
+    --color-background: #000000;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CCCCCC;
+    --color-accent: #FF0000;
+
+    /* Tipografia */
+    --font-primary: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    /* header */    
-    --font-header: Montserrat, sans-serif;
-    --color-header: #FFFFFF;
-
-    /* body */
-    --font-body: Montserrat, sans-serif;
-    --color-body: #FFFFFF;
-
-    /* link */
-    --color-link: #FF0000;
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
 }
 
-/* HEADER */
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-header{
+ul {
+    list-style-position: inside;
+}
+
+/*      2. HEADER      */
+
+header {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: radial-gradient(ellipse, rgb(0,0,0,0.85), rgb(0,0,0,1));
-    padding-left: 150px;
-    padding-right: 150px;
+    background: radial-gradient(ellipse, rgba(0,0,0,0.85), rgba(0,0,0,1));
+    padding: 0 150px;
 }
 
-/* logo */
-#container-logo{
+.logo-container {
     width: 150px;
     height: 30px;
 }
 
-#container-logo img{
+.logo-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-/* menu */
-header nav{
-    width: 600px;
-    height: 100%;
+header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-right: 40px;
 }
 
-header nav a{
-    font-family: var(--font-body);
+header nav a {
     font-weight: 600;
-    color: var(--color-body);
-    text-decoration: none;
     padding: 5px;
 }
 
-.link-ativo{
-    color: var(--color-link);
-    border-bottom: 1px solid var(--color-link);
+header nav .link-ativo {
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
 }
 
-header nav a:active{
-    color: var(--color-link);
-    border-bottom: 1px solid var(--color-link);
+header nav a:hover {
+    color: var(--color-accent);
 }
 
-/* BODY */
+/*      3. SEÇÕES DA HOME       */
 
-/* hero */
-#hero-section{
-    background-image: linear-gradient(rgb(0,0,0,0.4), rgb(0,0,0,0.6)) ,url(../img/hero.jpg);
+/* Hero */
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(../img/hero.jpg);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 700px;
-    padding-top: 300px;
-    padding-left: 300px;
+    padding: 300px 0 0 300px;
 }
 
-#hero-section h1{
-    font-family: var(--font-header);
+.hero-section h1 {
     font-weight: 700;
     font-size: 50px;
-    color: var(--color-header);
 }
 
-#hero-section p{
-    font-family: var(--font-body);
+.hero-section p {
     font-weight: 200;
     font-size: 17.5px;
-    color: var(--color-body);
+    margin-top: 5px;
 }
 
-#hero-section button{
+.hero-section .cta-button {
     background: transparent;
-    border: none;
-    margin-top: 25px;
-}
-
-#hero-section button a{
-    border: 1px solid white;
-    font-family: var(--font-body);
+    border: 1px solid var(--color-text-primary);
     font-weight: 300;
-    color: var(--color-body);
     padding: 10px 30px;
-    text-decoration: none;
+    margin-top: 25px;
+    display: inline-block;
 }
 
-/* modelos */
-#modelos-section{
-    background-color: black;
+.hero-section .cta-button:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+
+/* Modelos */
+.cards-section {
     width: 100%;
-    height: 700px;
+    padding: 80px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#modelos-title{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-#modelos-title h2{
-    font-family: var(--font-header);
+.section-title {
     font-weight: 700;
-    color: var(--color-header);
+    font-size: 24px;
+    margin-bottom: 50px;
 }
 
-#modelos{
+.cards-container {
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.modelo{
-    background: radial-gradient(ellipse, rgb(255,255,255,0.01));
-    box-shadow: 10px 10px 10px rgb(255,255,255,0.1);
+.card {
+    background: radial-gradient(ellipse, rgba(255,255,255,0.01), transparent);
+    box-shadow: 0px 10px 15px rgba(255,255,255,0.1);
     width: 300px;
     height: 400px;
-}
-
-.modelo img{
-    width: 100%;
-    height: 300px;
-}
-
-.titulo{
-    font-family: var(--font-body);
-    font-weight: 600;
-    color: var(--color-body);
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-.marca{
-    font-family: var(--font-body);
-    font-weight: 200;
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: var(--color-body);
-    padding-left: 10px;
-}
-
-.preco{
-    font-family: var(--font-body);
-    color: var(--color-body);
-    padding-left: 10px;
-}
-
-/* FOOTER */
-
-footer > div{
-    width: 100%;
-    height: 300px;
-    background-color: black;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-footer > div > div{
-    border: 1px solid white;
-    width: 400px;
-    height: 150px;
-}
-
-.copyright{
-    background-color: black;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.copyright p{
-    font-family: var(--font-body);
-    color: var(--color-body);
-}
-
-/* MAIN */
-
-main{
-    background-color: black;
-    padding-left: 150px;
-    padding-right: 175px;
-}
-
-/* SOBRE */
-
-#main-sobre > div, #main-contato > div{
-    margin-bottom: 20px;
-}
-
-#servicos > h3{
-    padding-top: 10px;
-}
-
-#main-sobre h1, #main-sobre h2, #main-sobre h3, #main-contato h1, #main-contato h2, #main-contato h3{
-    font-family: var(--font-header);
-    color: var(--color-header);
-}
-
-table{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#main-sobre p, #main-sobre li, #main-sobre td, #main-sobre th, #main-contato p, #main-contato li{
-    font-family: var(--font-body);
-    color: var(--color-body);
-}
-
-#main-sobre th, #main-sobre td{
     padding: 10px;
 }
 
-#main-sobre ul, #main-contato ul{
-    padding-left: 25px;
-    justify-content: center;
-    align-items: center;
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
 }
 
-/* CONTATO */
-
-#main-contato{
-    padding-top: 10px;
+.card .card-title {
+    font-weight: 600;
+    margin-top: 15px;
 }
 
-/* ===== FOOTER ===== */
+.card .card-subtitle {
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.card .card-price {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/*      4. CONTEÚDO PRINCIPAL        */
+
+.main-content {
+    padding: 50px 150px;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.main-content h1,.main-content h2,.main-content h3 {
+    margin-bottom: 15px;
+}
+
+.main-content p, .main-content li {
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.main-content h1 {
+    font-size: 28px;
+}
+.main-content h2 {
+    font-size: 22px;
+}
+.main-content h3 {
+    font-size: 18px;
+}
+.main-content strong {
+    color: var(--color-text-primary);
+}
+
+/* Tabela */
+.custom-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.custom-table th,.custom-table td {
+    border: 1px solid var(--color-text-secondary);
+    padding: 12px;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*      5. FOOTER        */
+
 footer {
-    background-color: black;
-    color: var(--color-body);
-    font-family: var(--font-body);
+    font-family: var(--font-primary);
 }
 
 .footer-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 50px 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
 }
 
 .footer-logo {
@@ -297,42 +245,32 @@ footer {
 .footer-logo p {
     font-weight: 300;
     font-size: 14px;
-    color: #ccc;
+    color: var(--color-text-secondary);
 }
 
-.footer-links h3,
-.footer-contato h3 {
+.footer-links h3,.footer-contato h3 {
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 15px;
-    color: var(--color-header);
     letter-spacing: 1px;
 }
 
-.footer-links ul,
-.footer-contato ul {
+.footer-links ul,.footer-contato ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-links li,
-.footer-contato li {
+.footer-links li,.footer-contato li {
     margin-bottom: 8px;
     font-size: 14px;
-    color: #ccc;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s ease;
+    color: var(--color-text-secondary);
 }
 
 .footer-links a:hover {
-    color: var(--color-link);
+    color: var(--color-accent);
 }
 
-hr {
+footer hr {
     border: none;
     border-top: 1px solid rgba(255,255,255,0.2);
     margin: 0 100px;
@@ -340,12 +278,11 @@ hr {
 
 .copyright {
     text-align: center;
-    padding: 15px 0;
-    background-color: black;
+    padding: 20px 0;
 }
 
 .copyright p {
     font-size: 13px;
-    color: #aaa;
+    color: #aaaaaa;
     letter-spacing: 0.5px;
 }
