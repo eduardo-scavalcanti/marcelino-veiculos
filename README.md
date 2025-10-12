@@ -41,4 +41,4 @@ Para visualizar o site, não é necessário nenhum servidor ou instalação. Sig
 -   [x] Imagens otimizadas com `alt` descritivo.
 -   [x] README com papéis, paleta, fontes e decisões.
 -   [x] Site no ar. *(Considerado como entregue em uma plataforma de hospedagem estática, como GitHub Pages)*.
--   [ ] Vídeo de demonstração.
+-   [x] Vídeo de demonstração.
