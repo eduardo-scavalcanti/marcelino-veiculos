@@ -6,8 +6,8 @@ Este projeto é um site institucional a "Marcelino Veículos", uma concessionár
 
 O projeto foi desenvolvido em dupla, com as seguintes responsabilidades:
 
-* **Eduardo Cavalcanti**: Contribuiu com o design geral, otimização de imagens, estilização com CSS, criação da paleta de cores, implementação do layout com Flexbox e tipografia.
-* **Felipe Franca**: Responsável pela estruturação semântica do HTML, organização do conteúdo, acessibilidade básica (textos alternativos, hierarquia de títulos) e revisão final do código e conteúdo.
+* **Eduardo Cavalcanti**: Contribuiu com o design geral, otimização de imagens, estilização com CSS, criação da paleta de cores, tipografia e implementação do layout com Flexbox.
+* **Felipe Franca**: Responsável pela estruturação semântica do HTML, organização do conteúdo, acessibilidade básica (textos alternativos, hierarquia de títulos) e README.
 
 ## Paleta de Cores
 
